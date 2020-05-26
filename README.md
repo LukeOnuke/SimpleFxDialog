@@ -7,7 +7,8 @@ A simple library containing a dialog system for javafx and java8.
 
  - Download the library(jar) from the releases page or click   
    [here](https://github.com/LukeOnuke/SimpleFxDialog/releases)
-   **NETBEANS**
+  
+  **NETBEANS**
    
  1. Paste the downloaded jar into a folder of your choise
  2. Open project settings (Right click onto the project then go `Properties`. After you are in the Project settings go `Libraries -> Add JAR/Folder` and select the jar of this library)

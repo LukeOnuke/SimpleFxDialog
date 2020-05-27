@@ -60,12 +60,12 @@ public class Dialog {
     }
 
     /**
-     * a
+     * Shows a dialog with the options of ok and cancel
      *
-     * @param dialogImage
-     * @param title
-     * @param text
-     * @return
+     * @param dialogImage The integer indentifier of the image that is displayed on the dialog, for simpler usage use the class DialogImage
+     * @param title The title of the dialog
+     * @param text The text displayed in the dialog
+     * @return A boolean that is true if the user pressed ok and false if the user exited or pressed cancel
      */
     public static boolean okCancelDialog(int dialogImage, String title, String text) {
         //setup return
@@ -151,7 +151,18 @@ public class Dialog {
 
         ok.setOnAction(okButtonPressed);
         cancel.setOnAction(cancelButtonPressed);
-
+        
+        double height;
+        height = 234.0;
+        double width;
+        width = 450.0;
+        
+        stage.setMaxHeight(height);
+        stage.setMaxWidth(width);
+        stage.setMinHeight(height);
+        stage.setMinWidth(width);
+        stage.setResizable(false);
+        
         //show stage
         stage.showAndWait();
 
@@ -162,19 +173,19 @@ public class Dialog {
     }
 
     /**
-     * a
+     * Shows a dialog with the options of ok and cancel
      *
-     * @param dialogImage
-     * @param title
-     * @param text
-     * @return
+     * @param dialogImage The integer indentifier of the image that is displayed on the dialog, for simpler usage use the class DialogImage
+     * @param title The title of the dialog
+     * @param text The text displayed in the dialog
+     * @return A boolean that is true if the user pressed ok and false if the user exited
      */
     public static boolean okDialog(int dialogImage, String title, String text) {
         //setup return
         AtomicInteger state = new AtomicInteger(0);
 
-        double height = 204;
-        double width = 448;
+        double height = 234;
+        double width = 450;
 
         StackPane r = new StackPane();
 
@@ -247,6 +258,12 @@ public class Dialog {
         AnchorPane.setBottomAnchor(ok, 20.0);
         double heightDiff = anchorPane.heightProperty().get() - 100;
         stage.setHeight(tf.heightProperty().get() + heightDiff + textF.getBoundsInLocal().getHeight());*/
+        
+        stage.setMaxHeight(height);
+        stage.setMaxWidth(width);
+        stage.setMinHeight(height);
+        stage.setMinWidth(width);
+        stage.setResizable(false);
         //set action
         ok.setOnAction(okButtonPressed);
 
@@ -261,9 +278,9 @@ public class Dialog {
 
     /**
      *
-     * @param dialogImage
-     * @param title
-     * @param text
+     * @param dialogImage The integer indentifier of the image that is displayed on the dialog, for simpler usage use the class DialogImage
+     * @param title The title of the dialog
+     * @param text The text displayed in the dialog
      * @return String of what has been typed into the message box, if it is canceled it returns null.
      */
     public static String formDialog(int dialogImage, String title, String text) {
@@ -357,6 +374,17 @@ public class Dialog {
 
         ok.setOnAction(okButtonPressed);
         cancel.setOnAction(cancelButtonPressed);
+        
+        double height;
+        height = 234.0;
+        double width;
+        width = 450.0;
+        
+        stage.setMaxHeight(height);
+        stage.setMaxWidth(width);
+        stage.setMinHeight(height);
+        stage.setMinWidth(width);
+        stage.setResizable(false);
 
         //show stage
         stage.showAndWait();

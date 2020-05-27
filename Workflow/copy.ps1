@@ -32,7 +32,8 @@ Write-Host "Done copying release version library" -ForegroundColor White -Backgr
 
 echo "Copying to project"
 # Copy the now setup file for compiling
-robocopy $destination "C:\Users\lukak\Documents\NetBeansProjects\SimpleFxDialog\"
+$ddd = $destination + "src\"
+robocopy $ddd "C:\Users\lukak\Documents\NetBeansProjects\SimpleFxDialog\src\" /is /it /E
 
 Write-Host "Done setting up library" -ForegroundColor White -BackgroundColor Green
 Write-Host "Now compile the SimpleFxDialog library and when its done press enter" -ForegroundColor White -BackgroundColor Red

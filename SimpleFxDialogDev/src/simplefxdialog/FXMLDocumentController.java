@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import simplefxdialog.img.DialogImage;
 
 /**
  *
@@ -25,7 +26,7 @@ public class FXMLDocumentController implements Initializable {
     private void handleButtonAction(ActionEvent event) {
         System.out.println("You clicked me!");
         label.setText("Hello World!");
-        System.out.println(Dialog.okCancelDialog(0, "Title", "Text text text"));
+        System.out.println(Dialog.okCancelDialog(DialogImage.error, "Title", "Text text text"));
     }
     
     @Override

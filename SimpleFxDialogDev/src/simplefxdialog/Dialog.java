@@ -60,12 +60,12 @@ public class Dialog {
     }
 
     /**
-     * a
+     * Shows a dialog with the options of ok and cancel
      *
-     * @param dialogImage
-     * @param title
-     * @param text
-     * @return
+     * @param dialogImage The integer indentifier of the image that is displayed on the dialog, for simpler usage use the class DialogImage
+     * @param title The title of the dialog
+     * @param text The text displayed in the dialog
+     * @return A boolean that is true if the user pressed ok and false if the user exited or pressed cancel
      */
     public static boolean okCancelDialog(int dialogImage, String title, String text) {
         //setup return
@@ -161,6 +161,7 @@ public class Dialog {
         stage.setMaxWidth(width);
         stage.setMinHeight(height);
         stage.setMinWidth(width);
+        stage.setResizable(false);
         
         //show stage
         stage.showAndWait();
@@ -172,12 +173,12 @@ public class Dialog {
     }
 
     /**
-     * a
+     * Shows a dialog with the options of ok and cancel
      *
-     * @param dialogImage
-     * @param title
-     * @param text
-     * @return
+     * @param dialogImage The integer indentifier of the image that is displayed on the dialog, for simpler usage use the class DialogImage
+     * @param title The title of the dialog
+     * @param text The text displayed in the dialog
+     * @return A boolean that is true if the user pressed ok and false if the user exited
      */
     public static boolean okDialog(int dialogImage, String title, String text) {
         //setup return
@@ -262,6 +263,7 @@ public class Dialog {
         stage.setMaxWidth(width);
         stage.setMinHeight(height);
         stage.setMinWidth(width);
+        stage.setResizable(false);
         //set action
         ok.setOnAction(okButtonPressed);
 
@@ -276,9 +278,9 @@ public class Dialog {
 
     /**
      *
-     * @param dialogImage
-     * @param title
-     * @param text
+     * @param dialogImage The integer indentifier of the image that is displayed on the dialog, for simpler usage use the class DialogImage
+     * @param title The title of the dialog
+     * @param text The text displayed in the dialog
      * @return String of what has been typed into the message box, if it is canceled it returns null.
      */
     public static String formDialog(int dialogImage, String title, String text) {
@@ -382,6 +384,7 @@ public class Dialog {
         stage.setMaxWidth(width);
         stage.setMinHeight(height);
         stage.setMinWidth(width);
+        stage.setResizable(false);
 
         //show stage
         stage.showAndWait();

@@ -20,6 +20,7 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
+import javafx.stage.StageStyle;
 
 /**
  *
@@ -162,6 +163,7 @@ public class Dialog {
         stage.setMinHeight(height);
         stage.setMinWidth(width);
         stage.setResizable(false);
+        stage.initStyle(StageStyle.UTILITY);
         
         //show stage
         stage.showAndWait();
@@ -264,6 +266,7 @@ public class Dialog {
         stage.setMinHeight(height);
         stage.setMinWidth(width);
         stage.setResizable(false);
+        stage.initStyle(StageStyle.UTILITY);
         //set action
         ok.setOnAction(okButtonPressed);
 
@@ -385,6 +388,7 @@ public class Dialog {
         stage.setMinHeight(height);
         stage.setMinWidth(width);
         stage.setResizable(false);
+        stage.initStyle(StageStyle.UTILITY);
 
         //show stage
         stage.showAndWait();

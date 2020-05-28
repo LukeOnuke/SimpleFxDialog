@@ -1,4 +1,7 @@
 # Simple Fx Dialog
+
+![banner](https://i.imgur.com/jDsThDb.png)
+
 A simple library containing a dialog system for javafx and java8.
 
 ***Currently in very early development , so the polish isnt up to the standards of a library. If you see a bug report it to the issue tracker. Documentation is in the works!***

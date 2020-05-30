@@ -4,8 +4,6 @@
 
 A simple library containing a dialog system for javafx and java8.
 
-***Currently in very early development , so the polish isnt up to the standards of a library. If you see a bug report it to the issue tracker. Documentation is in the works!***
-
 Wiki : [here](https://github.com/LukeOnuke/SimpleFxDialog/wiki)
 
 ## Instalation
@@ -19,6 +17,22 @@ Wiki : [here](https://github.com/LukeOnuke/SimpleFxDialog/wiki)
  2. Open project settings (Right click onto the project then go `Properties`. After you are in the Project settings go `Libraries -> Add JAR/Folder` and select the jar of this library)
 
    If you cant find a guide for your IDE follow a guide for using a external library for your IDE of choise
+
+## Documentation
+Wiki front page: [here](https://github.com/LukeOnuke/SimpleFxDialog/wiki)
+```
+Wiki 
+│
+Wiki front page
+|
+└───Class : Dialog
+│   │   Method : okCancelDialog()
+│   │   Method : okDialog()
+│   │   Method : formDialog()
+|   │   Method : custom2ButtonDialog()   
+|
+└───Class : DialogImage
+```
 
 ## Roadmap
 **Documentation:**
@@ -36,5 +50,6 @@ Wiki : [here](https://github.com/LukeOnuke/SimpleFxDialog/wiki)
  - Add a issue template
  - Add automation and github actions
 
+
 ## Contribution
-If you want to contribute you are welcome to do in any way imaginable, exept donations, those will be made possible when v1.0.0 comes around. Easiest way to contribute is to star the repository.
+If you want to contribute you are welcome to do in any way imaginable. Easiest way to contribute is to star the repository.

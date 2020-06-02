@@ -30,6 +30,7 @@ Wiki front page
 │   │   Method : okDialog()
 │   │   Method : formDialog()
 |   │   Method : custom2ButtonDialog()   
+|   |   Method : formDialog()
 |
 └───Class : DialogImage
 ```

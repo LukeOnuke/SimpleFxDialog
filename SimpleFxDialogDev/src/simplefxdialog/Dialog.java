@@ -10,6 +10,7 @@ import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
@@ -17,6 +18,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
+import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
@@ -413,7 +415,8 @@ public class Dialog {
      * @param buttonText A array of names for the buttons
      * @param title The title of the dialog
      * @param text The text displayed in the dialog
-     * @return A int that is 1 if the user pressed the right button 2 if the user pressed the left button and 0 if the user exited
+     * @return A int that is 1 if the user pressed the right button 2 if the
+     * user pressed the left button and 0 if the user exited
      */
     public static int custom2ButtonDialog(int dialogImage, String[] buttonText, String title, String text) {
         //setup return
@@ -499,7 +502,7 @@ public class Dialog {
 
         button1.setOnAction(okButtonPressed);
         button2.setOnAction(cancelButtonPressed);
-        
+
         button1.setText(buttonText[0]);
         button2.setText(buttonText[1]);
 
@@ -519,6 +522,131 @@ public class Dialog {
         stage.showAndWait();
 
         return state.get();
+    }
+
+    /**
+     * Shows a about box type dialog with a ok button. To leave out a field in the about box just set the parameter to null.
+     * 
+     * @param image The image displayed in the imageView. Image size 200x200 .
+     * @param titleText Title text. To leave out this field set this parameter to null.
+     * @param authorText The name of the author or the authors corporations. To leave out this field set this parameter to null.
+     * @param programText The name of the program. To leave out this field set this parameter to null.
+     * @param licenceText The name of the licence used. To leave out this field set this parameter to null.
+     * @param sofrwareUsedText Software used (used when software licences require mentioning of usage). To leave out this field set this parameter to null.
+     */
+    public static void aboutDialog(Image image, String titleText, String authorText, String programText, String licenceText, String sofrwareUsedText) {
+        /*
+        * |============================================================|
+        * |setup stage (AKA the black box, do not tuch unless necesary)|
+        * |============================================================|
+        */
+        AnchorPane anchorPane;
+        StackPane r = new StackPane();
+
+        ImageView imageView;
+        Label about;
+        Label author;
+        Label program;
+        Label licence;
+        Label softwareu;
+        Button button;
+
+        anchorPane = new AnchorPane();
+        imageView = new ImageView();
+        about = new Label();
+        author = new Label();
+        program = new Label();
+        licence = new Label();
+        softwareu = new Label();
+        button = new Button();
+
+        VBox.setVgrow(anchorPane, javafx.scene.layout.Priority.ALWAYS);
+        anchorPane.setMaxHeight(-1.0);
+        anchorPane.setMaxWidth(-1.0);
+        anchorPane.setPrefHeight(304.0);
+        anchorPane.setPrefWidth(640.0);
+
+        imageView.setFitHeight(200.0);
+        imageView.setFitWidth(200.0);
+        imageView.setPickOnBounds(true);
+        imageView.setPreserveRatio(true);
+
+        about.setLayoutX(208.0);
+        about.setLayoutY(14.0);
+        about.setText("About");
+        about.setTextFill(javafx.scene.paint.Color.valueOf("#808080"));
+        about.setFont(new Font(19.0));
+
+        author.setLayoutX(208.0);
+        author.setLayoutY(52.0);
+        //set text if there is any
+        if (authorText != null) {
+            author.setText("Author : " + authorText);
+        }
+
+        program.setLayoutX(208.0);
+        program.setLayoutY(81.0);
+        //set text if there is any
+        if (programText != null) {
+            program.setText("Program : " + programText);
+        }
+
+        licence.setLayoutX(208.0);
+        licence.setLayoutY(111.0);
+        //set text if there is any
+        if (licenceText != null) {
+            licence.setText("Licence : " + licenceText);
+        }
+
+        softwareu.setLayoutX(208.0);
+        softwareu.setLayoutY(140.0);
+        //set text if there is any
+        if (sofrwareUsedText != null) {
+            softwareu.setText("Software Used : " + sofrwareUsedText);
+        }
+
+        button.setDefaultButton(true);
+        button.setLayoutX(496.0);
+        button.setLayoutY(159.0);
+        button.setMnemonicParsing(false);
+        button.setText("Ok");
+
+        anchorPane.getChildren().add(imageView);
+        anchorPane.getChildren().add(about);
+        anchorPane.getChildren().add(author);
+        anchorPane.getChildren().add(program);
+        anchorPane.getChildren().add(licence);
+        anchorPane.getChildren().add(softwareu);
+        anchorPane.getChildren().add(button);
+        r.getChildren().add(anchorPane);
+        
+        /*
+        * |==================|
+        * | Setup stage done | 
+        * |==================|
+        */
+        
+        //title and declare scene
+        Stage stage = new Stage();
+        stage.setTitle(titleText);
+        //new stage show
+        stage.setScene(new Scene(r, 545.0, 200.0));
+
+        //Make it not resizable and make it not display a icon
+        stage.setResizable(false);
+        stage.initStyle(StageStyle.UTILITY);
+
+        //Set the image
+        imageView.setImage(image);
+
+        final Stage fstage = stage;
+        //setup OnActionEvent
+        EventHandler<ActionEvent> okButtonPressed = (ActionEvent e) -> {
+            fstage.close();
+        };
+        button.setOnAction(okButtonPressed);
+
+        stage.showAndWait();
     }
 
 }

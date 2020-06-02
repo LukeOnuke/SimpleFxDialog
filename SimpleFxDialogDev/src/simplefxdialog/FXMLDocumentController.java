@@ -24,10 +24,7 @@ public class FXMLDocumentController implements Initializable {
     
     @FXML
     private void handleButtonAction(ActionEvent event) {
-        String[] bb = new String[2];
-        bb[0] = "aaaaa";
-        bb[1] = "eeeee";
-        System.out.println(Dialog.custom2ButtonDialog(DialogImage.error, bb, "aaaaaaaaaaa", "bbbbbbbbbbbbbbbb"));
+        Dialog.aboutDialog(null, "boi", "lukeonuke", "simpleFxDialog", "GNU GPL v3.0", "netbeans");
     }
     
     @Override

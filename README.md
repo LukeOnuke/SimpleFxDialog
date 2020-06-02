@@ -36,10 +36,6 @@ Wiki front page
 ```
 
 ## Roadmap
-**Documentation:**
-
- -  Create github wiki and add vital documentation 	
- -  Add javaDocs for in IDE documentation
  
  **Development:**
  - Squish bugs

@@ -2,7 +2,7 @@
 
 ![banner](https://i.imgur.com/jDsThDb.png)
 
-A simple library containing a dialog system for javafx and java8.
+A library with a lot of preset dialogs with simple syntax.
 
 Wiki : [here](https://github.com/LukeOnuke/SimpleFxDialog/wiki)
 
@@ -31,6 +31,7 @@ Wiki front page
 │   │   Method : formDialog()
 |   │   Method : custom2ButtonDialog()   
 |   |   Method : formDialog()
+| 	 |	Method : aboutDialog()
 |
 └───Class : DialogImage
 ```
@@ -39,8 +40,6 @@ Wiki front page
  
  **Development:**
  - Squish bugs
- - More pollish
- - Custom CSS functionality
  
  **Github:**
  

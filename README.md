@@ -29,11 +29,20 @@ Wiki front page
 │   │   Method : okCancelDialog()
 │   │   Method : okDialog()
 │   │   Method : formDialog()
-|   │   Method : custom2ButtonDialog()   
-|   |   Method : formDialog()
-| 	 |	Method : aboutDialog()
-|
-└───Class : DialogImage
+│   │   Method : custom2ButtonDialog()   
+│   │   Method : formDialog()
+│ 	│	Method : aboutDialog()
+│
+└───Enum : DialogImage
+│
+│
+│
+└───Exception : NotSupportedException
+│
+│
+│
+└───Class : TrayDialog
+│   │   Method : displayTrayNotification()
 ```
 
 ## Roadmap

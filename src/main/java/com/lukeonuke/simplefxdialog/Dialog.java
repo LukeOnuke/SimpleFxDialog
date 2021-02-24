@@ -36,22 +36,22 @@ public class Dialog {
         
         switch (image) {
             case ERROR:
-                imageName = "ERROR.png";
+                imageName = "/ERROR.png";
                 break;
             case WARNING:
-                imageName = "WARNING.png";
+                imageName = "/WARNING.png";
                 break;
             case INFO:
-                imageName = "INFO_BLUE.png";
+                imageName = "/INFO_BLUE.png";
                 break;
             case INFO_EXCLAMATION:
-                imageName = "INFO_BLUE_EXCLAMATION.png";
+                imageName = "/INFO_BLUE_EXCLAMATION.png";
                 break;
             case INFO_QUESTION:
-                imageName = "INFO_BLUE_QUESTION.png";
+                imageName = "/INFO_BLUE_QUESTION.png";
                 break;
             default:
-                imageName = "ERROR.png";
+                imageName = "/ERROR.png";
                 break;
         }
         return imageName;
@@ -129,7 +129,7 @@ public class Dialog {
         tf.getChildren().add(textF);
 
         //set image
-        Image img = new Image(com.lukeonuke.simplefxdialog.img.DialogImage.class.getResourceAsStream(imageResovler(dialogImage)));
+        Image img = new Image(Dialog.class.getResourceAsStream(imageResovler(dialogImage)));
         imageView.imageProperty().set(img);
 
         //title and declare scene
@@ -240,7 +240,7 @@ public class Dialog {
         tf.getChildren().add(textF);
 
         //set image
-        Image img = new Image(com.lukeonuke.simplefxdialog.img.DialogImage.class.getResourceAsStream(imageResovler(dialogImage)));
+        Image img = new Image(Dialog.class.getResourceAsStream(imageResovler(dialogImage)));
         imageView.imageProperty().set(img);
 
         //title and declare scene
@@ -357,7 +357,7 @@ public class Dialog {
         tf.getChildren().add(textF);
 
         //set image
-        Image img = new Image(com.lukeonuke.simplefxdialog.img.DialogImage.class.getResourceAsStream(imageResovler(dialogImage)));
+        Image img = new Image(Dialog.class.getResourceAsStream(imageResovler(dialogImage)));
         imageView.imageProperty().set(img);
 
         //title and declare scene
@@ -475,7 +475,7 @@ public class Dialog {
         tf.getChildren().add(textF);
 
         //set image
-        Image img = new Image(com.lukeonuke.simplefxdialog.img.DialogImage.class.getResourceAsStream(imageResovler(dialogImage)));
+        Image img = new Image(Dialog.class.getResourceAsStream(imageResovler(dialogImage)));
         imageView.imageProperty().set(img);
 
         //title and declare scene

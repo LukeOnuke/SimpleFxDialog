@@ -64,16 +64,6 @@ Wiki front page
 │   │   Method : displayTrayNotification()
 ```
 
-## Roadmap
- 
- **Development:**
- - Squish bugs
- 
- **Github:**
- 
- - Add a issue template
- - Add automation and github actions
-
 
 ## Contribution
 If you want to contribute you are welcome to do in any way imaginable. Easiest way to contribute is to star the repository.
